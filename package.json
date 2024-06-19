@@ -1,6 +1,6 @@
 {
-  "name": "wheather",
-  "homepage": "https://AoiWicked.github.io/wheather",
+  "name": "weather",
+  "homepage": "https://AoiWicked.github.io/weather",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,8 +19,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "deploy": "npm run build",
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
