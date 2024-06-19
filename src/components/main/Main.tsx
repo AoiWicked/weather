@@ -42,7 +42,7 @@ export function Main({ modal, setModal }: IPropsMain) {
                 {modal || !day ? (
                     <div className={cl.find}>
                         {error && (
-                            <p style={{ color: "white", fontSize: "18px" }}>
+                            <p style={{ color: "white", fontSize: "1.25rem" }}>
                                 {error}
                             </p>
                         )}
