@@ -1,0 +1,36 @@
+.about {
+    justify-self: end;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    .block {
+        display: flex;
+        gap: 3px;
+        padding: 7px;
+        border-right: 1px solid gray;
+    }
+    
+    .block:last-child {
+        border-right: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .about{
+        flex-direction: column;
+        gap: 15px;
+    } 
+    .block {
+        border-bottom: 1px solid gray;
+        border-right: none !important; 
+        justify-content: space-between;
+    }
+    
+    .block:last-child {
+        border-bottom: none;
+    }
+}

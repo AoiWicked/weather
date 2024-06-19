@@ -1,0 +1,83 @@
+@import '../../SCSS/variables.scss';
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0px 10px 0px 10px;
+    height: 90px;
+    background-color: $header;
+    align-items: center;
+    user-select: none;
+    .logo {
+        justify-self: start;
+    }
+    .nav {
+        list-style-type: none;
+        display: flex;
+        gap: 10px;
+        justify-self: center;
+        color: white;
+        text-align: center;
+        :hover {
+            border-bottom: 1px solid white;
+        }
+        :active {
+            background-color: rgba(255, 255, 255, 0.144);
+        }
+        li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0);
+            padding: 15px;
+            background-color: $content;
+            border-radius: 10px;
+            font-size: 1.4rem;
+        }
+    }
+    .about {
+        justify-self: end; 
+    }
+    .aboutImg {
+        // position: relative;
+        display: none;
+        justify-self: end;
+    }
+    .aboutPosition {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 91px;
+        padding: 5px;
+        background-color: $content;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .about {
+        display: none !important; 
+    }
+    .aboutImg {
+        display: block !important;
+    }
+    .header {
+        .nav {
+            li {
+                font-size: 1rem;
+            }
+        :hover {
+            border-bottom: none;
+
+        }
+    }
+    }
+
+    
+}
+
+@media (max-width: 900px) {
+    .nav {
+        li {
+
+            font-size: 1rem;
+        }
+    }
+ }
